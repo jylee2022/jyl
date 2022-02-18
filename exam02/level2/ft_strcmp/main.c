@@ -5,30 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juyolee <juyolee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/13 01:23:55 by juyolee           #+#    #+#             */
-/*   Updated: 2022/02/13 01:24:46 by juyolee          ###   ########.fr       */
+/*   Created: 2022/02/18 08:19:56 by juyolee           #+#    #+#             */
+/*   Updated: 2022/02/18 08:26:12 by juyolee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
+#include <string.h>
 
-char	*ft_strcapitalize(char *str);
+int	ft_strcmp(char *s1, char *s2);
 
 int	main(void)
 {
-	char	*str_base;
-	char	str_cap[36];
-	int	index;
+	char	*str1 = "This is competition";
+	char	*str2 = "Thi";
 
-	//str_base = "salut, c0mment tu vas ? 42mots quarante-deux; cinquante+et+un";
-	str_base = "Vk_(7X)Vmf#H'Fk?>8j@} /7VVxh3(X{6)Xb";
-	index = 0;
-	while (index < 37)
-	{
-		str_cap[index] = str_base[index] + 0;
-		index++;
-	}
-	ft_strcapitalize(&str_cap[0]);
-	//printf("base        : %s\n", str_base);
-	//printf("capitalized : %s\n", str_lower);
-	printf("%s\n", str_cap);
+	printf("c  : %d\n", strcmp(str1, str2));
+	printf("ft : %d\n", ft_strcmp(str1, str2));
 }
